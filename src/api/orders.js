@@ -15,3 +15,20 @@ export const createOrder = async (data) => {
 export const cancelOrder = async (id) => {
   return await api.patch(`/api/orders/${id}/cancel`);
 };
+
+export const payViaKhalti = async (id) => {
+  return await api.put(`/api/orders/${id}/payment/khalti`);
+};
+
+export const payViaStripe = async (id) => {
+  return await api.put(`/api/orders/${id}/payment/stripe`);
+};
+
+
+export const payViaCash = async (id) => {
+  return await api.put(`/api/orders/${id}/payment/cash`);
+};
+
+export const confirmOrder = async (id, status) => {
+  return await api.put(`/api/orders/${id}/confirm`, { status: status });
+};
