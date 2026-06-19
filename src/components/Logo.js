@@ -14,7 +14,7 @@ const Logo = () => {
         className="h-9"
       />
       <h1 className="text-2xl font-bold mt-1 text-transparent bg-linear-to-r from-primary to-secondary bg-clip-text">
-        FashionWear
+        HamroMart
       </h1>
     </Link>
   );
