@@ -10,7 +10,11 @@ import PasswordInput from "@/components/PasswordInput";
 import SocialLogins from "../_components/SocialLogins";
 import Spinner from "@/components/Spinner";
 import useAuthStore from "@/stores/authStore";
-import { HOME_ROUTE, REGISTER_ROUTE } from "@/constants/routes";
+import {
+  FORGOT_PASSWORD_ROUTE,
+  HOME_ROUTE,
+  REGISTER_ROUTE,
+} from "@/constants/routes";
 import { login } from "@/api/auth";
 
 const LoginPage = () => {
@@ -42,7 +46,7 @@ const LoginPage = () => {
   return (
     <section className="bg-gray-50 dark:bg-gray-900">
       <div className="flex items-center justify-center py-10 md:py-20">
-        <div className="w-full rounded-lg dark:border sm:max-w-md dark:bg-gray-800 dark:border-gray-700">
+        <div className="w-full rounded-lg sm:max-w-md dark:bg-gray-900 ">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
               Sign in to your account
@@ -97,12 +101,12 @@ const LoginPage = () => {
                     </label>
                   </div>
                 </div>
-                <a
-                  href="#"
+                <Link
+                  href={FORGOT_PASSWORD_ROUTE}
                   className="text-sm font-medium text-primary hover:underline dark:text-primary-500"
                 >
                   Forgot password?
-                </a>
+                </Link>
               </div>
               <button
                 type="submit"
@@ -115,7 +119,7 @@ const LoginPage = () => {
                 )}
               </button>
               <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                Don't have an account yet?{" "}
+                Don&apos;t have an account yet?{" "}
                 <Link
                   href={REGISTER_ROUTE}
                   className="font-medium text-primary hover:underline"

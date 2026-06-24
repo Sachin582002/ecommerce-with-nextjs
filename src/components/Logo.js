@@ -8,13 +8,13 @@ const Logo = () => {
     <Link href={HOME_ROUTE} className="flex items-center gap-2">
       <Image
         src={logo}
-        alt="FashionWear"
+        alt="HamroMart"
         height={32}
         width={32}
         className="h-9"
       />
-      <h1 className="text-2xl font-bold mt-1 text-transparent bg-linear-to-r from-primary to-secondary bg-clip-text">
-        HamroMart
+      <h1 className="text-lg md:text-2xl font-bold mt-1 text-transparent bg-linear-to-r from-primary to-secondary bg-clip-text">
+        Hamromart
       </h1>
     </Link>
   );
